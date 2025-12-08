@@ -1,0 +1,38 @@
+{
+  "name": "well-known_architectures",
+  "version": "1.0.0",
+  "description": "Creation of an inventory manager project with hexagonal architecture",
+  "homepage": "https://github.com/SudoRelax/well-known_architectures#readme",
+  "bugs": {
+    "url": "https://github.com/SudoRelax/well-known_architectures/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SudoRelax/well-known_architectures.git"
+  },
+  "license": "ISC",
+  "author": "Da Silva Felix Bruno",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon ./src/index.ts",
+    "build": "tsc",
+    "start": "node dist/index.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^5.2.1",
+    "morgan": "^1.10.1"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.6",
+    "@types/morgan": "^1.9.10",
+    "@types/nodemon": "^1.19.6",
+    "chalk": "^5.6.2",
+    "nodemon": "^3.1.11",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.19.2",
+    "typescript": "^5.9.3"
+  }
+}
