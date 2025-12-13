@@ -1,0 +1,6 @@
+{
+    "workbench.tree.enableStickyScroll": true,
+    "workbench.tips.enabled": true,
+    "workbench.tree.indent": 16,
+    "workbench.tree.renderIndentGuides": "always"
+}

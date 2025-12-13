@@ -1,0 +1,14 @@
+export class User {
+    readonly name: string;
+    readonly email: string;
+    readonly username: string;
+    readonly password: string;
+    readonly role?: string;
+
+    constructor(name: string, email: string, username: string, password: string) {
+        this.name = name;
+        this.email = email;
+        this.username = username;
+        this.password = password;
+    }
+}
