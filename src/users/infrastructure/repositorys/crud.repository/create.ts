@@ -11,6 +11,7 @@ export class CrudUserRepository implements ICreateUserAdapter {
 
             const seed = await UsersModel.findOne({ role: "admin" })
 
+
             if (!seed) {
                 await UsersModel.create({ ...user, role: "admin" })
                 return {
@@ -20,7 +21,17 @@ export class CrudUserRepository implements ICreateUserAdapter {
                 }
             }
 
-            const newUser = await UsersModel.create(user);
+            await UsersModel.create(user);
+
+            const userCreated = await UsersModel.findOne({ email: user.email, username: user.username, name: user.name });
+
+            if (!userCreated) {
+                return {
+                    msg: "Usuario no creado",
+                    code: 400,
+                    status: "error"
+                }
+            }
 
             return {
                 msg: "Usuario creado exitosamente",
@@ -29,8 +40,8 @@ export class CrudUserRepository implements ICreateUserAdapter {
             }
 
         } catch (error) {
-
             return ShowError.showErrorUser(error)
         }
     }
+
 }
