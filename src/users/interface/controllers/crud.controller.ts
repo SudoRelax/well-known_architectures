@@ -14,7 +14,7 @@ export class CrudUserController {
             const result = await this.usersService.createUser.execute(user);
 
             if ("code" in result) {
-                res.status(result.code).json(result);
+                res.status(result.code).json(result.msg);
             }
 
         } catch (error) {
