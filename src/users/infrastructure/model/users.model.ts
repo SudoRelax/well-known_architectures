@@ -25,7 +25,7 @@ const userSchema = new Schema<User>({
         required: true,
         default: "user"
     }
-});
+}, { timestamps: true });
 
 userSchema.index({
     name: "text",

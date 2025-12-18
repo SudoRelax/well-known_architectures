@@ -51,8 +51,17 @@ export class ShowError {
                         code: 409,
                         status: "conflict"
                     };
-            }
+                case 11001:
+                    Logs.red('El usuario ya existe.');
+                    Logs.red(Separator.horizontalRule());
 
+                    return {
+                        msg: "El usuario ya existe.",
+                        code: 409,
+                        status: "conflict"
+                    };
+
+            }
         }
 
 

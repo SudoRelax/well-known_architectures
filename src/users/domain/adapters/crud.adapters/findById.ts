@@ -1,8 +1,8 @@
 import { User } from "../../entities/user";
 import { IMsg } from "../../../../shaders/types/msg/msg.types";
 
-export interface ICreateUserAdapter {
+export interface IFindUserByIdAdapter {
 
-    create(user: User): Promise<User | IMsg>;
+    findById(id: string): Promise<User | IMsg>;
 
 }
