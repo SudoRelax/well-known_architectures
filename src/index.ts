@@ -5,6 +5,7 @@ import { Logs } from "./shaders/utils/logs";
 import { Separator } from "./shaders/utils/separator";
 import { connectToDatabase } from "./shaders/configs/database/connection";
 import { usersRouter } from "./users/interface/routers/crud.route";
+import { authRouter } from "./authentication/interface/routers/auth.route";
 
 const app = express();
 
@@ -17,7 +18,7 @@ app.use(cors({
 app.use(morgan("dev"));
 
 app.use("/users", usersRouter);
-
+app.use("/auth", authRouter);
 
 app.listen(3000, () => {
     Logs.green(Separator.horizontalRule());

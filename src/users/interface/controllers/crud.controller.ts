@@ -2,11 +2,14 @@ import { Request, Response } from "express";
 import { User } from "../../domain/entities/user";
 import { usersService } from "../../../shaders/services/users"
 import { verificationService } from "../../../shaders/services/verification"
+import { authenticationService } from "../../../shaders/services/authentication";
+import jwt from "jsonwebtoken";
 
 export class CrudUserController {
 
     private readonly usersService = usersService;
     private readonly sendEmailService = verificationService;
+    private readonly authenticationService = authenticationService;
 
     async createUser(req: Request, res: Response) {
         try {
@@ -54,5 +57,14 @@ export class CrudUserController {
             console.log(error);
             res.status(500).json({ error: "Error al verificar usuario" });
         }
+    }
+
+    async profile(req: Request, res: Response) {
+        const userId = req.body.userId;
+        const result = await this.usersService.findUserById.execute(userId);
+
+        if ("code" in result) return res.status(result.code).json({ msg: result.msg });
+
+        return res.status(200).json(result);
     }
 }
