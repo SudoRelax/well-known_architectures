@@ -1,5 +1,5 @@
-import { SendEmailAdapter } from "../../domain/adapter/verification/sendEmail";
-import { User } from "../../../users/domain/entities/user";
+import { SendEmailAdapter } from "../domain/adapter/sendEmail";
+import { User } from "../../users/domain/entities/user";
 
 export class SendEmailUseCase {
     constructor(private readonly sendEmailAdapter: SendEmailAdapter) { }

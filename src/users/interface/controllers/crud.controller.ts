@@ -44,7 +44,6 @@ export class CrudUserController {
 
             if (!userOrNull) return res.status(400).json({ error: "Código inválido o expirado" });
 
-
             const result = await this.usersService.createUser.execute(userOrNull);
 
             if ("code" in result) return res.status(result.code).json({ msg: result.msg });

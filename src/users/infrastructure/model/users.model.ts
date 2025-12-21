@@ -34,4 +34,4 @@ userSchema.index({
 });
 
 
-export const UsersModel = model<User>("Users", userSchema);
+export const UsersModel = model<User>("users", userSchema);

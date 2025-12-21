@@ -1,4 +1,4 @@
-import { VerificationEmailAdapter } from "../../domain/adapter/verification/verificationEmail";
+import { VerificationEmailAdapter } from "../domain/adapter/verificationEmail";
 
 export class VerificationEmailUseCase {
     constructor(private readonly verificationEmailAdapter: VerificationEmailAdapter) { }

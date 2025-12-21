@@ -1,7 +1,7 @@
-import { SendEmailRepository } from "../../authentication/infrastructure/repositories/verification/sendEmail";
-import { SendEmailUseCase } from "../../authentication/application/verification/sendEmail";
-import { VerifyCodeRepository } from "../../authentication/infrastructure/repositories/verification/verifyCode";
-import { VerifyCodeUseCase } from "../../authentication/application/verification/verifyCode";
+import { SendEmailRepository } from "../../verification/infrastructure/repositories/sendEmail";
+import { SendEmailUseCase } from "../../verification/application/sendEmail";
+import { VerifyCodeRepository } from "../../verification/infrastructure/repositories/verifyCode";
+import { VerifyCodeUseCase } from "../../verification/application/verifyCode";
 
 export const verificationService = {
     sendEmail: new SendEmailUseCase(new SendEmailRepository()),

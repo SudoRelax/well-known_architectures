@@ -48,7 +48,6 @@ export class CrudUserRepository implements ICreateUserAdapter, IFindUserByIdAdap
     async findById(id: string): Promise<User | IMsg> {
         try {
             const userFound = await UsersModel.findById(id);
-            console.log(userFound);
 
             if (!userFound) {
                 return {

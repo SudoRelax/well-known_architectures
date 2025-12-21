@@ -1,5 +1,5 @@
-import { VerifyCodeAdapter } from "../../domain/adapter/verification/verifyCode";
-import { User } from "../../../users/domain/entities/user";
+import { VerifyCodeAdapter } from "../domain/adapter/verifyCode";
+import { User } from "../../users/domain/entities/user";
 
 export class VerifyCodeUseCase {
     constructor(private readonly verifyCodeAdapter: VerifyCodeAdapter) { }

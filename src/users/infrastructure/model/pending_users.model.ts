@@ -10,4 +10,4 @@ const pendingUserSchema = new Schema({
     createdAt: { type: Date, default: Date.now, expires: 900 } // 15 minutes
 });
 
-export const PendingUserModel = model("PendingUsers", pendingUserSchema);
+export const PendingUserModel = model("pending_users", pendingUserSchema);
